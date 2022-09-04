@@ -1,0 +1,362 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DCMS.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en" style="overflow: auto;">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <%--<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">--%>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<style type="text/css">
+    nav {
+        position: relative;
+        width: 360px;
+        background: grey;
+    }
+
+    .navbar {
+        position: relative
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        nav ul li {
+            max-height: 400px;
+            overflow: auto; /* Scrollbar */
+            /* Sub Menu */
+        }
+
+            nav ul li a {
+                display: block;
+                padding: 10px 15px;
+                color: #fff;
+                text-decoration: none;
+                -webkit-transition: 0.2s linear;
+                -moz-transition: 0.2s linear;
+                -ms-transition: 0.2s linear;
+                -o-transition: 0.2s linear;
+                transition: 0.2s linear;
+            }
+
+                nav ul li a:hover {
+                    background: #1d4f71;
+                    color: gray;
+                }
+
+                nav ul li a .fa {
+                    width: 8px;
+                    text-align: center;
+                    margin-right: 5px;
+                    float: right;
+                }
+
+        nav ul ul {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul li ul li a {
+            border-left: 4px solid transparent;
+            padding: 10px 20px;
+        }
+
+            nav ul li ul li a:hover {
+                border-left: 4px solid #3498db;
+            }
+</style>
+<body>
+    <authentication mode="Forms">
+        <forms loginurl="~/Login.aspx" protection="All" timeout="600" slidingexpiration="true" domain="" />
+    </authentication>
+    <div class="d-flex align-items-stretch ">
+        <nav id="sidebar">
+
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+
+                <ul id="MainMenu">
+
+                    <li class='sub-menu'><a>Pickup<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li><a href="../NewPickupReq.aspx" name="pickup_req">Pickup Request</a></li>
+                            <li><a href="../AssignPickupReq.aspx">Assign Pickup Request</a></li>
+                            <li><a href="../PickupStatusEntry.aspx">Pickup Status Entry</a></li>
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href='#settings'>Operation<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li><a href="../ShortPackageEntry.aspx" name="ShortPacketEntry">Short Packet Entry</a></li>
+                            <li><a href="../PacketEntry" name="PacketEntry">Packet Entry</a></li>
+                            <li><a href="">Manifest Entry</a></li>
+                            <li><a href="../DeleteAwbNo" name="deleteAwbno">Delete AwbNo</a></li>
+                            <li><a href="../BagLocking" name="bagLocking">Bag Locking</a></li>
+                            <li><a href="../DispatchEntry" name="DispatchEntry">Dispatch Entry</a></li>
+                            <li><a href="">Update CD No.</a></li>
+                            <li><a href="">Arrival Entry</a></li>
+                            <li><a href="">Arrival Entry Box Wise</a></li>
+                            <li><a href="">Runsheet Prepare</a></li>
+                            <li><a href="">Packet Entry Status</a></li>
+                            <li><a href="">POS Scan Upload</a></li>
+                            <li><a href="">Update Forwading No.</a></li>
+                            <li><a href="">Cancel Awb No.</a></li>
+                            <li><a href="">Send Bulk Mail</a></li>
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href='#settings'>Query<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li><a href="">Awb No.</a></li>
+                            <li><a href="">Report Query</a></li>
+
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href='#settings'>Report<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li><a href="">Pickup Info Report</a></li>
+                            <li><a href="">Pickup Report</a> </li>
+                            <li><a href="">Booking Report</a></li>
+                            <li><a href="">Manifest/Bagging Report</a></li>
+                            <li><a href="">Dispatch Report</a></li>
+                            <li><a href="">Manifest/Bagging In-Scan Report</a></li>
+                            <li><a href="">Box In-Scan Report</a></li>
+                            <li><a href="">Runsheet Report</a></li>
+                            <li><a href="">Stock Report</a></li>
+                            <li><a href="">User Log Report</a> </li>
+                            <li><a href="">View POD Scan</a></li>
+                            <li><a href="">AWB Stock Report</a></li>
+                            <li><a href="">Route Dashboard</a></li>
+                            <li><a href="">SMS Sent Report</a></li>
+
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href='#settings'>Print<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li><a href="">Awb/Box No. Print</a></li>
+                            <li><a href="">Bag Print</a></li>
+                            <li><a href="">Manifest Print</a></li>
+                            <li><a href="">Dispatch Print</a></li>
+                            <li><a href="">Runsheet Print</a></li>
+                            <li>
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href='#settings'>General Setting<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li><a href="">Assign Dest To Zone &amp; Network</a></li>
+                            <li><a href="">Default Settings</a></li>
+                            <li><a href="">Shipper Stock</a></li>
+                            <li><a href="">Shipper Issue To Branch</a></li>
+                            <li><a href="">Shipper Issue To Employee/Client</a></li>
+                            <li><a href="">Assign Route To Boy</a></li>
+                            <li><a href="">Assign Route To Client</a></li>
+                            <li><a href="">Client SMS Settings</a></li>
+
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href="#settings">User Master<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li>
+                                <a href="../UserMaster.aspx" name="Usermaster" onclick="Usermaster_Click">User Master</a>
+                            </li>
+                            <li>
+                                <a href="../UserAccess.aspx">User Menu Access</a>
+                            </li>
+                            <li>
+                                <a href="../UserGrpMaster.aspx">User Group Master</a>
+                            </li>
+                            <li>
+                                <a href="../GrpMenuAccess.aspx">Group Menu Access</a>
+                            </li>
+                            <li>
+                                <a href="../BranchAccess.aspx">User Branch Access</a>
+                            </li>
+                            <li>
+                                <a href="../ChangePsw.aspx" name="ChngPswd" onclick="ChngPswd_Click">Change Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href='#settings'>Invoice<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li>
+                                <a href="" name="Usermaster">Generate Client Bill</a>
+                            </li>
+                            <li>
+                                <a href="">Generate 2nd/3rd Party Bill</a>
+                            </li>
+                            <li>
+                                <a href="">Client Bill Print</a>
+                            </li>
+                            <li>
+                                <a href="">Client Contact</a>
+                            </li>
+                            <li>
+                                <a href="">Client MIS</a>
+                            </li>
+                            <li>
+                                <a href="" name="ChngPswd">Payment Receipt</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href='#settings'>Master<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li><a href="" name="Usermaster">Branch Master</a> </li>
+                            <li><a href="">Company Master</a></li>
+                            <li><a href="">Client Master</a></li>
+                            <li><a href="">Network Master</a></li>
+                            <li><a href="">Network Service Master</a></li>
+                            <li><a href="">Country Master</a> </li>
+                            <li><a href="">Zone Master</a> </li>
+                            <li><a href="">Destination Master</a> </li>
+                            <li><a href="">Route Master</a></li>
+                            <li><a href="">Pin-Code Master</a></li>
+                            <li><a href="">Forwarding Agent Master</a></li>
+                            <li><a href="">Forwarding Service Master</a></li>
+                            <li><a href="">Mode Master</a> </li>
+                            <li><a href="">Charge Type Master</a></li>
+                            <li><a href="" name="ChngPswd">Consignee Master</a></li>
+
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href="#settings">Import<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li>
+                                <a href="" name="Usermaster">Packet Import</a>
+                            </li>
+                            <li>
+                                <a href="">Packet Status Import</a>
+                            </li>
+                            <li>
+                                <a href="">Client Rate Import</a>
+                            </li>
+                            <li>
+                                <a href="">Extra Charge Import</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class='sub-menu'><a href='#message'>COD Management<div class='fa fa-caret-down right'></div>
+                    </a>
+                        <ul>
+                            <li>
+                                <a href="" name="Usermaster" onclick="Usermaster_Click">Day Reconciliation</a>
+                            </li>
+                            <li>
+                                <a href="">Bank Reconciliation</a>
+                            </li>
+                            <li>
+                                <a href="">Upload Bank Receipt</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <%--<li><a href='#message'>Logout</a></li>--%>
+                </ul>
+                <div class="footer">
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i>by <a href="#" target="_blank">technologieshvr@gmail.com</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!--<ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul> -->
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Admin</a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#" class="dropdown-item">Reports</a>
+                                    <a href="#" class="dropdown-item">Settings</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder runat="server" ID="Main" />
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+
+
+        $('.sub-menu ul').hide();
+        //$(".sub-menu a").click(function () {
+
+        //    $(this).parent(".sub-menu").children("ul").slideToggle("100");
+        //    $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
+
+        //});
+        //solution link - https://stackoverflow.com/questions/13364183/open-and-close-submenus-on-click-jquery
+        $(function () {
+            $('#MainMenu > li').click(function (e) { // limit click to children of mainmenue
+                var $el = $('ul', this); // element to toggle
+                $('#MainMenu > li > ul').not($el).slideUp(); // slide up other elements
+                $el.stop(true, true).slideToggle(400); // toggle element
+                return false;
+            });
+            $('#MainMenu > li > ul > li').click(function (e) {
+                e.stopPropagation();  // stop events from bubbling from sub menu clicks
+            });
+        });
+
+
+    </script>
+</body>
+</html>
