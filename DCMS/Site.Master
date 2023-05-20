@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <style type="text/css">
+    #MainPag{
+      scroll-behavior:auto; 
+    }
+    
     nav {
         position: relative;
         width: 360px;
@@ -74,7 +78,7 @@
                 border-left: 4px solid #3498db;
             }
 </style>
-<body>
+<body id="MainPag">
     <authentication mode="Forms">
         <forms loginurl="~/Login.aspx" protection="All" timeout="600" slidingexpiration="true" domain="" />
     </authentication>
@@ -103,42 +107,43 @@
                             <li><a href="../DeleteAwbNo" name="deleteAwbno">Delete AwbNo</a></li>
                             <li><a href="../BagLocking" name="bagLocking">Bag Locking</a></li>
                             <li><a href="../DispatchEntry" name="DispatchEntry">Dispatch Entry</a></li>
-                            <li><a href="">Update CD No.</a></li>
-                            <li><a href="">Arrival Entry</a></li>
-                            <li><a href="">Arrival Entry Box Wise</a></li>
-                            <li><a href="">Runsheet Prepare</a></li>
-                            <li><a href="">Packet Entry Status</a></li>
-                            <li><a href="">POS Scan Upload</a></li>
-                            <li><a href="">Update Forwading No.</a></li>
+                            <li><a href="../UpdateCDNo" name="updateCDNo">Update CD No.</a></li>
+                            <li><a href="../ArrivalEntry" name="ArrivalEntry">Arrival Entry</a></li>
+                            <li><a href="../ArrivalEntryBoxWise" name="ArrivalEntryBoxWise">Arrival Entry Box Wise</a></li>
+                            <li><a href="../RunsheetPrepare" name="RunsheetPrepare">Runsheet Prepare</a></li>
+                            <li><a href="../PacketEntryStatus" name="PacketEntryStatus">Packet Entry Status</a></li>
+                            <li><a href="../POSScanUpload" name="POSScanUpload">POS Scan Upload</a></li>
+                            <li><a href="../UpdateForwadingNo" name="UpdateForwadingNo">Update Forwading No.</a></li>
                             <li><a href="">Cancel Awb No.</a></li>
-                            <li><a href="">Send Bulk Mail</a></li>
+                            <li><a href="../SendBulkMail" name="SendBulkMail">Send Bulk Mail</a></li>
                         </ul>
                     </li>
                     <li class='sub-menu'><a href='#settings'>Query<div class='fa fa-caret-down right'></div>
                     </a>
                         <ul>
-                            <li><a href="">Awb No.</a></li>
-                            <li><a href="">Report Query</a></li>
+                            <li><a href="../AwbNoQuery" name="AwbNoQuery">Awb No.</a></li>
+                            <li><a href="../ReportQuery" name="ReportQuery">Report Query</a></li>
 
                         </ul>
                     </li>
                     <li class='sub-menu'><a href='#settings'>Report<div class='fa fa-caret-down right'></div>
                     </a>
                         <ul>
-                            <li><a href="">Pickup Info Report</a></li>
-                            <li><a href="">Pickup Report</a> </li>
-                            <li><a href="">Booking Report</a></li>
-                            <li><a href="">Manifest/Bagging Report</a></li>
-                            <li><a href="">Dispatch Report</a></li>
-                            <li><a href="">Manifest/Bagging In-Scan Report</a></li>
-                            <li><a href="">Box In-Scan Report</a></li>
-                            <li><a href="">Runsheet Report</a></li>
-                            <li><a href="">Stock Report</a></li>
-                            <li><a href="">User Log Report</a> </li>
-                            <li><a href="">View POD Scan</a></li>
-                            <li><a href="">AWB Stock Report</a></li>
-                            <li><a href="">Route Dashboard</a></li>
-                            <li><a href="">SMS Sent Report</a></li>
+                            <li><a href="../PickupInfoRprt">Pickup Info Report</a></li>
+                            <li><a href="../PickupReport">Pickup Report</a> </li>
+                            <li><a href="../BookingReport">Booking Report</a></li>
+                            <li><a href="../Manifest_BAggingReport">Manifest/Bagging Report</a></li>
+                            <li><a href="../DispatchReport">Dispatch Report</a></li>
+                            <li><a href="../Manifest_BaggingInScanRprt">Manifest/Bagging In-Scan Report</a></li>
+                            <li><a href="../BoxInScanReport">Box In-Scan Report</a></li>
+                            <li><a href="../RunSheetReport">Runsheet Report</a></li>
+                            <li><a href="../DeliveryStatusReport">Delivery Status Report</a></li>
+                            <li><a href="../StockReport">Stock Report</a></li>
+                            <li><a href="../UserLogReport">User Log Report</a> </li>
+                            <li><a href="../ViewPODScan">View POD Scan</a></li>
+                            <li><a href="../AwbStockReport">AWB Stock Report</a></li>
+                            <li><a href="../RouteDashBoard">Route Dashboard</a></li>
+                            <li><a href="../SMSSentReport">SMS Sent Report</a></li>
 
                         </ul>
                     </li>

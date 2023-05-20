@@ -27,7 +27,7 @@ namespace DCMS.Sql_Connection
         {
             try
             {
-                //SqlCon = new SqlConnection("Data Source=DESKTOP-D0BCFT7\\" +
+                //SqlCon = new SqlConnection("Data Source=DESKTOP-D0BCFT7\\" +~ā
                 //                "SQL_STARTUP;Initial Catalog=ReportServer$SQL_STARTUP;" +
                 //                "Persist Security Info=True;User ID=;Password=");
                 //SqlCon = new SqlConnection("Data Source=DESKTOP-MC08BAA\\SQLEXPRESS;Initial Catalog=DCMS;User ID=sa;Password=hvrtech@1311");

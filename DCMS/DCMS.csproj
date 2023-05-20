@@ -106,6 +106,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="ArrivalEntryBoxWise.aspx" />
+    <Content Include="ArrivalEntry.aspx" />
+    <Content Include="SMSSentReport.aspx" />
+    <Content Include="RouteDashBoard.aspx" />
+    <Content Include="BookingReport.aspx" />
+    <Content Include="DeliveryStatusReport.aspx" />
+    <Content Include="AwbStockReport.aspx" />
+    <Content Include="ViewPODScan.aspx" />
+    <Content Include="UserLogReport.aspx" />
+    <Content Include="StockReport.aspx" />
+    <Content Include="RunSheetReport.aspx" />
+    <Content Include="BoxInScanReport.aspx" />
+    <Content Include="Manifest_BaggingInScanRprt.aspx" />
+    <Content Include="DispatchReport.aspx" />
+    <Content Include="Manifest_BAggingReport.aspx" />
+    <Content Include="PickupReport.aspx" />
+    <Content Include="PickupInfoRprt.aspx" />
+    <Content Include="ReportQuery.aspx" />
+    <Content Include="PacketEntryStatus.aspx" />
+    <Content Include="RunsheetPrepare.aspx" />
+    <Content Include="POSScanUpload.aspx" />
+    <Content Include="AwbNoQuery.aspx" />
+    <Content Include="SendBulkMail.aspx" />
+    <Content Include="UpdateForwadingNo.aspx" />
+    <Content Include="UpdateCDNo.aspx" />
     <Content Include="DeleteAwbNo.aspx" />
     <Content Include="bootstrap\css.css" />
     <Content Include="BranchAccess.aspx" />
@@ -301,6 +326,181 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ArrivalEntryBoxWise.aspx.cs">
+      <DependentUpon>ArrivalEntryBoxWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArrivalEntryBoxWise.aspx.designer.cs">
+      <DependentUpon>ArrivalEntryBoxWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArrivalEntry.aspx.cs">
+      <DependentUpon>ArrivalEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArrivalEntry.aspx.designer.cs">
+      <DependentUpon>ArrivalEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMSSentReport.aspx.cs">
+      <DependentUpon>SMSSentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMSSentReport.aspx.designer.cs">
+      <DependentUpon>SMSSentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RouteDashBoard.aspx.cs">
+      <DependentUpon>RouteDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RouteDashBoard.aspx.designer.cs">
+      <DependentUpon>RouteDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookingReport.aspx.cs">
+      <DependentUpon>BookingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingReport.aspx.designer.cs">
+      <DependentUpon>BookingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryStatusReport.aspx.cs">
+      <DependentUpon>DeliveryStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeliveryStatusReport.aspx.designer.cs">
+      <DependentUpon>DeliveryStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AwbStockReport.aspx.cs">
+      <DependentUpon>AwbStockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AwbStockReport.aspx.designer.cs">
+      <DependentUpon>AwbStockReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPODScan.aspx.cs">
+      <DependentUpon>ViewPODScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPODScan.aspx.designer.cs">
+      <DependentUpon>ViewPODScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogReport.aspx.cs">
+      <DependentUpon>UserLogReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogReport.aspx.designer.cs">
+      <DependentUpon>UserLogReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockReport.aspx.cs">
+      <DependentUpon>StockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockReport.aspx.designer.cs">
+      <DependentUpon>StockReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RunSheetReport.aspx.cs">
+      <DependentUpon>RunSheetReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RunSheetReport.aspx.designer.cs">
+      <DependentUpon>RunSheetReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BoxInScanReport.aspx.cs">
+      <DependentUpon>BoxInScanReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BoxInScanReport.aspx.designer.cs">
+      <DependentUpon>BoxInScanReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest_BaggingInScanRprt.aspx.cs">
+      <DependentUpon>Manifest_BaggingInScanRprt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manifest_BaggingInScanRprt.aspx.designer.cs">
+      <DependentUpon>Manifest_BaggingInScanRprt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DispatchReport.aspx.cs">
+      <DependentUpon>DispatchReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DispatchReport.aspx.designer.cs">
+      <DependentUpon>DispatchReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest_BAggingReport.aspx.cs">
+      <DependentUpon>Manifest_BAggingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manifest_BAggingReport.aspx.designer.cs">
+      <DependentUpon>Manifest_BAggingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PickupReport.aspx.cs">
+      <DependentUpon>PickupReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PickupReport.aspx.designer.cs">
+      <DependentUpon>PickupReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PickupInfoRprt.aspx.cs">
+      <DependentUpon>PickupInfoRprt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PickupInfoRprt.aspx.designer.cs">
+      <DependentUpon>PickupInfoRprt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportQuery.aspx.cs">
+      <DependentUpon>ReportQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportQuery.aspx.designer.cs">
+      <DependentUpon>ReportQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacketEntryStatus.aspx.cs">
+      <DependentUpon>PacketEntryStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacketEntryStatus.aspx.designer.cs">
+      <DependentUpon>PacketEntryStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RunsheetPrepare.aspx.cs">
+      <DependentUpon>RunsheetPrepare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RunsheetPrepare.aspx.designer.cs">
+      <DependentUpon>RunsheetPrepare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="POSScanUpload.aspx.cs">
+      <DependentUpon>POSScanUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="POSScanUpload.aspx.designer.cs">
+      <DependentUpon>POSScanUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AwbNoQuery.aspx.cs">
+      <DependentUpon>AwbNoQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AwbNoQuery.aspx.designer.cs">
+      <DependentUpon>AwbNoQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendBulkMail.aspx.cs">
+      <DependentUpon>SendBulkMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendBulkMail.aspx.designer.cs">
+      <DependentUpon>SendBulkMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateForwadingNo.aspx.cs">
+      <DependentUpon>UpdateForwadingNo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateForwadingNo.aspx.designer.cs">
+      <DependentUpon>UpdateForwadingNo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCDNo.aspx.cs">
+      <DependentUpon>UpdateCDNo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateCDNo.aspx.designer.cs">
+      <DependentUpon>UpdateCDNo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DeleteAwbNo.aspx.cs">
       <DependentUpon>DeleteAwbNo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
