@@ -11,12 +11,20 @@ namespace DCMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //System.Threading.Thread th = new System.Threading.Thread(new System.Threading.ThreadStart(CallMasterPage));
-            //th.Name = "LoginPageTh";
-            //th.Start();
-            //Response.Redirect("~/Login.aspx");
-            //DCMS.LoginInitialize.LoginView lg = new  DCMS.LoginInitialize.LoginView();
+            try
+            {
 
+
+                System.Threading.Thread th = new System.Threading.Thread(new System.Threading.ThreadStart(CallMasterPage));
+                th.Name = "LoginPageTh";
+                th.Start();
+                //Response.Redirect("~/LoginInitialize/LoginView.aspx");
+                //DCMS.LoginInitialize.LoginView lg = new  DCMS.LoginInitialize.LoginView();
+            }
+            catch (Exception ex)
+            {
+
+            }
 
         }
 
@@ -25,7 +33,10 @@ namespace DCMS
         {
             try
             {
-               // Response.Redirect("~/Login.aspx");
+
+                Response.Redirect("~/LoginInitialize/LoginView.aspx");
+
+                //Response.Redirect("~/Login.aspx");
 
                 //Response.Redirect("~/Site.Master");
 

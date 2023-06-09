@@ -13,5 +13,17 @@ namespace DCMS.LoginInitialize
         {
 
         }
+
+        private void lgnBtn_Click(object sender,EventArgs evt)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }
