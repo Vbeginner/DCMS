@@ -17,40 +17,40 @@ namespace DCMS
         //    GetUserMasterdata();
         //}
 
-        //protected void SubmitUserDetail_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        //if (Validate() == true)
-        //        //{
-        //        //    string query = "INSERT INTO USER_MASTER(USER_CODE,USER_NAME,BRANCH_NAME,USER_GROUP,JOIN_DATE,LOCAL_ADD,PRE_ADD,IS_ACTIVE,ADMIN_DETAIL," +
-        //        // "EMAIL_ID,PHONE_NO,ROUTE_NAME) VALUES ('" + usercode.Text + "','" + username.Text + "','" + brchname.Text + "','" +
-        //        // usergrp.Text + "','" + joinddate.Text + "','" + localadd.Text + "','" + peradd.Text + "','" + isActive.Text + "','" +
-        //        // admindetails.Text + "','" + email.Text + "','" + phoneno.Text + "','')";
+        protected void SubmitUserDetail_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //if (Validate() == true)
+                //{
+                //    string query = "INSERT INTO USER_MASTER(USER_CODE,USER_NAME,BRANCH_NAME,USER_GROUP,JOIN_DATE,LOCAL_ADD,PRE_ADD,IS_ACTIVE,ADMIN_DETAIL," +
+                // "EMAIL_ID,PHONE_NO,ROUTE_NAME) VALUES ('" + usercode.Text + "','" + username.Text + "','" + brchname.Text + "','" +
+                // usergrp.Text + "','" + joinddate.Text + "','" + localadd.Text + "','" + peradd.Text + "','" + isActive.Text + "','" +
+                // admindetails.Text + "','" + email.Text + "','" + phoneno.Text + "','')";
 
-        //        //    int ab = Sql_Connection.Sql_DB_Connection.ExecuteNonQuery(query);
-        //        //    if (ab == 1)
-        //        //    {
-        //        //        string message = "Your details have been saved successfully.";
-        //        //        string script = "window.onload = function(){ alert('";
-        //        //        script += message;
-        //        //        script += "')};";
+                //    int ab = Sql_Connection.Sql_DB_Connection.ExecuteNonQuery(query);
+                //    if (ab == 1)
+                //    {
+                //        string message = "Your details have been saved successfully.";
+                //        string script = "window.onload = function(){ alert('";
+                //        script += message;
+                //        script += "')};";
 
-        //        //        ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
-        //        //        ClearAll();
-        //        //        GetUserMasterdata();
+                //        ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+                //        ClearAll();
+                //        GetUserMasterdata();
 
-        //        //    }
-        //       // }
+                //    }
+               // }
 
 
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //       // printerror.Text = ex.Message + "!!";
-        //    }
-        //}
+            }
+            catch (Exception ex)
+            {
+               // printerror.Text = ex.Message + "!!";
+            }
+        }
 
 
         ////public bool Validate()

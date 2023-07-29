@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StockReport.aspx.cs" Inherits="DCMS.StockReport" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="Main" runat="server">
+<asp:Content ID="Content1"ContentPlaceHolderID="Main" runat="server">
     <html>
     <head>
         <title></title>
@@ -8,15 +8,15 @@
             .mybtn {
                 border: 1px solid Red;
                 align-content: center;
-                height: 30;
-                width: 80;
+                height: 30px;
+                width: 80px;
                 align-items: center;
                 //some more styles
             }
 
             .error {
                 align-content: center;
-                background: botom;
+                background: bottom;
                 color: red;
             }
 
@@ -66,7 +66,7 @@
                 <div id="page-heading">
                     <ol class="breadcrumb">
                         <h1>
-                            <li><a href="index.aspx">Dashboard</a></li>
+                            <li><a href="Dashboard.aspx">Dashboard</a></li>
                         </h1>
 
                     </ol>

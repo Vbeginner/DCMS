@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="DCMS.index" %>
+﻿<%@ Page Title="Dashboard Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="DCMS.Dashboard" %>
 
 
 
@@ -20,10 +20,11 @@
                     <div id="page-heading">
                         <ol class="breadcrumb">
                             <h1>
-                                <li><a href="index.aspx">Dashboard</a></li>
+                                <li><a href="Dashboard.aspx">Dashboard</a></li>
                             </h1>
 
                         </ol>
+                        
                     </div>
                     <div class="page-content container-fluid">
                         <div class="panel">

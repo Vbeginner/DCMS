@@ -9,8 +9,8 @@
 {
    border:1px solid Red;
    align-content:center;
-   height:30;
-   width :80;
+   height:30px;
+   width :80px;
    align-items:center;
 
        
@@ -18,7 +18,7 @@
 }
     .error{
         align-content:center;
-        background:botom;
+        background:bottom;
         color:red;
     }
     .UserGrid{

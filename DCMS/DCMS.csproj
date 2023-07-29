@@ -108,6 +108,7 @@
     <Content Include="About.aspx" />
     <Content Include="ArrivalEntryBoxWise.aspx" />
     <Content Include="ArrivalEntry.aspx" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="SMSSentReport.aspx" />
     <Content Include="RouteDashBoard.aspx" />
     <Content Include="BookingReport.aspx" />
@@ -174,7 +175,6 @@
     <Content Include="Login.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="images\logo.jpg" />
-    <Content Include="index.aspx" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\main.js" />
@@ -339,6 +339,10 @@
     </Compile>
     <Compile Include="ArrivalEntry.aspx.designer.cs">
       <DependentUpon>ArrivalEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SMSSentReport.aspx.cs">
       <DependentUpon>SMSSentReport.aspx</DependentUpon>
@@ -547,13 +551,6 @@
     </Compile>
     <Compile Include="GrpMenuAccess.aspx.designer.cs">
       <DependentUpon>GrpMenuAccess.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="AssignPickupReq.aspx.cs">
       <DependentUpon>AssignPickupReq.aspx</DependentUpon>

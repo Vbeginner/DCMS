@@ -19,7 +19,7 @@ namespace DCMS
             try
             {
 
-                Response.Redirect("~/index.aspx");
+                Response.Redirect("~/Dashboard.aspx");
                 //var thname = System.Threading.Thread.CurrentThread;
 
                 //thname.Abort();

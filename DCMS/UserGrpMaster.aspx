@@ -4,7 +4,7 @@
         <style>
              .error{
         align-content:center;
-        background:botom;
+        background:bottom;
         
     }
         </style>

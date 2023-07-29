@@ -12,10 +12,10 @@ namespace DCMS
     public partial class NewPickupReq : System.Web.UI.Page
     {
 
-        //protected void Page_Load(object sender, EventArgs e)
-        //{
-        //    GetUserMasterdata();
-        //}
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            //GetUserMasterdata();
+        }
 
         protected void SubmitUserDetail_Click(object sender, EventArgs e)
         {

@@ -8,15 +8,15 @@
             .mybtn {
                 border: 1px solid Red;
                 align-content: center;
-                height: 30;
-                width: 80;
+                height: 30px;
+                width: 80px;
                 align-items: center;
                 //some more styles
             }
 
             .error {
                 align-content: center;
-                background: botom;
+                background: bottom;
                 color: red;
             }
 

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace DCMS
 {
-    public partial class SiteMaster :  MasterPage
+    public partial class SiteMaster : MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -15,9 +15,9 @@ namespace DCMS
             {
 
 
-                System.Threading.Thread th = new System.Threading.Thread(new System.Threading.ThreadStart(CallMasterPage));
-                th.Name = "LoginPageTh";
-                th.Start();
+                //System.Threading.Thread th = new System.Threading.Thread(new System.Threading.ThreadStart(CallMasterPage));
+                //th.Name = "LoginPageTh";
+                //th.Start();
                 //Response.Redirect("~/LoginInitialize/LoginView.aspx");
                 //DCMS.LoginInitialize.LoginView lg = new  DCMS.LoginInitialize.LoginView();
             }
@@ -34,7 +34,7 @@ namespace DCMS
             try
             {
 
-                Response.Redirect("~/LoginInitialize/LoginView.aspx");
+                //Response.Redirect("~/LoginInitialize/LoginView.aspx");
 
                 //Response.Redirect("~/Login.aspx");
 
@@ -47,7 +47,7 @@ namespace DCMS
             }
         }
 
-        public void Usermaster_Click(object sender,EventArgs e)
+        public void Usermaster_Click(object sender, EventArgs e)
         {
             try
             {

@@ -1,10 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="LoginView.aspx.cs" Inherits="DCMS.LoginInitialize.LoginView" %>
-       <%--< @import url('https://fonts.googleapis.com/css?family=Mukta');--%>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="LoginView.aspx.cs" Inherits="DCMS.LoginInitialize.LoginView" %>--%>
+
+<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="LoginView.aspx.cs" Inherits="DCMS.LoginInitialize.LoginView" %>
+
+<%--<%@ MasterType VirtualPath="~/Site.Master" %>--%>
+
+<%--< @import url('https://fonts.googleapis.com/css?family=Mukta');--%>
+<%--<asp:Content ID="Content1" ContentPlaceHolderID="Main" runat="Server">--%>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<html xmlns="http://www.w3.org/1999/xhtml" runat="server">
+
+<head>
     <title>HVR Courier System </title>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
@@ -13,7 +20,6 @@
 
 
     <style>
-
         body {
             font-family: 'Mukta', sans-serif;
             height: 100vh;
@@ -164,6 +170,7 @@
             float: right;
             cursor: pointer;
         }
+        
 
         .credit {
             position: absolute;
@@ -179,7 +186,7 @@
             letter-spacing: 1px;
             z-index: 99;
         }
-
+        
         a {
             text-decoration: none;
             color: #2c7715;
@@ -188,76 +195,200 @@
 </head>
 
 <body>
-        
-    <div class="login-reg-panel">
-        <div class="login-info-box">
-            <h2>Have an account?</h2>
-            <p>Lorem ipsum dolor sit amet</p>
-            <label id="label-register" for="log-reg-show">Login</label>
-            <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked" />
-        </div>
+    <form runat="server">
 
-        <div class="register-info-box">
-            <h2>Don't have an account?</h2>
-            <p>Lorem ipsum dolor sit amet</p>
-            <label id="label-login" for="log-login-show">Register</label>
-            <input type="radio" name="active-log-panel" id="log-login-show" />
-        </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Navbar brand -->
+                <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                    <h5 class="pt-1">DCMS</h5>
+                </a>
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
 
-        <div class="white-panel">
-            <div class="login-show">
-                <h2>LOGIN</h2>
-                <input type="text" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <%--<asp:Button ID="savebtn" runat="server"  OnClick="lgnBtn_Click" Text="Login" class="btn btn-login float-right"/>--%>
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
 
-                <input type="button" value="Login" runat="server" onclick="lgnBtn_Click"/>
-                <a href="" >Forgot password?</a>
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center justify-content-start">
+                        <!-- Icon -->
+                        <a class="text-reset me-3" href="#">
+                            <i class="fas fa-shopping-cart text-white"></i>
+                        </a>
+
+                        <!-- Notifications -->
+                        <div class="dropdown">
+                            <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bell text-white"></i>
+                                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="#">Some news</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Another news</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Avatar -->
+                        <div class="dropdown">
+                            <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                                <li>
+                                    <a class="dropdown-item" href="#">My profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Right elements -->
+                </div>
+                <!-- Collapsible wrapper -->
             </div>
-            <div class="register-show">
-                <h2>REGISTER</h2>
-                <input type="text" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <input type="password" placeholder="Confirm Password" />
-                <input type="button" value="Register" />
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+
+            <div style="height: 265px;"></div>
+
+
+        <div class="login-reg-panel">
+            <div class="login-info-box">
+                <h2>Have an account?</h2>
+                <p>Lorem ipsum dolor sit amet</p>
+                <label id="label-register" for="log-reg-show">Login</label>
+                <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked" />
+            </div>
+
+            <div class="register-info-box">
+                <h2>Don't have an account?</h2>
+                <p>Lorem ipsum dolor sit amet</p>
+                <label id="label-login" for="log-login-show">Register</label>
+                <input type="radio" name="active-log-panel" id="log-login-show" />
+            </div>
+
+            <div class="white-panel">
+                <div class="login-show">
+                    <h2>LOGIN</h2>
+                    <input type="text" name="lgnEmail" placeholder="Email" />
+                    <input type="password" name="lgnPswd" placeholder="Password" />
+                    <%--<input type="button" id="Button1" runat="server" value="Button" onclick="Button1_Click" />--%>
+                    <a href="">Forgot password?</a>
+
+                    <asp:Button  Width="150px" Height="40px"  BorderStyle="Solid"  BackColor="#444444"  runat="server" Text="Button" OnClick="Button1_Click" />
+
+                </div>
+                <div class="register-show">
+                    <h2>REGISTER</h2>
+                    <input type="text" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <input type="password" placeholder="Confirm Password" />
+                    <input type="button" value="Register" />
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('.login-info-box').fadeOut();
-            $('.login-show').addClass('show-log-panel');
-        });
-
-
-        $('.login-reg-panel input[type="radio"]').on('change', function () {
-            if ($('#log-login-show').is(':checked')) {
-                $('.register-info-box').fadeOut();
-                $('.login-info-box').fadeIn();
-
-                $('.white-panel').addClass('right-log');
-                $('.register-show').addClass('show-log-panel');
-                $('.login-show').removeClass('show-log-panel');
-
-            }
-            else if ($('#log-reg-show').is(':checked')) {
-                $('.register-info-box').fadeIn();
+        <script>
+            $(document).ready(function () {
                 $('.login-info-box').fadeOut();
-
-                $('.white-panel').removeClass('right-log');
-
                 $('.login-show').addClass('show-log-panel');
-                $('.register-show').removeClass('show-log-panel');
-            }
-        });
+            });
 
-    </script>
 
+            $('.login-reg-panel input[type="radio"]').on('change', function () {
+                if ($('#log-login-show').is(':checked')) {
+                    $('.register-info-box').fadeOut();
+                    $('.login-info-box').fadeIn();
+
+                    $('.white-panel').addClass('right-log');
+                    $('.register-show').addClass('show-log-panel');
+                    $('.login-show').removeClass('show-log-panel');
+
+                }
+                else if ($('#log-reg-show').is(':checked')) {
+                    $('.register-info-box').fadeIn();
+                    $('.login-info-box').fadeOut();
+
+                    $('.white-panel').removeClass('right-log');
+
+                    $('.login-show').addClass('show-log-panel');
+                    $('.register-show').removeClass('show-log-panel');
+                }
+            });
+
+        </script>
+
+        <!-- Footer -->
+        <footer class="bg-primary text-center text-white fixed-bottom">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+                    <!-- Github -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright:
+        <a class="text-white" href="https://www.youtube.com/channel/UCxIOsMyoWsSMek7SeWafE_w">HV Technology Solution</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </form>
 
 </body>
 </html>
+
+<%--</asp:Content>--%>

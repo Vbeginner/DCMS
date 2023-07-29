@@ -8,9 +8,9 @@
 //------------------------------------------------------------------------------
 
 
-namespace DCMS
+namespace Test_Master
 {
-    public partial class index
+    public partial class loginPage
     {
     }
 }
