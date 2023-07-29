@@ -26,17 +26,7 @@ namespace DCMS.LoginInitialize
             bool ab = false;
             try
             {
-                if (!string.IsNullOrEmpty(lgnEmail)
-                    && !string.IsNullOrEmpty(usercode.Text)
-                     && !string.IsNullOrEmpty(brchname.Text)
-                      && !string.IsNullOrEmpty(phoneno.Text)
-                       && !string.IsNullOrEmpty(peradd.Text)
-                        && !string.IsNullOrEmpty(localadd.Text)
-
-                          && !string.IsNullOrEmpty(email.Text)
-
-                            && !string.IsNullOrEmpty(joinddate.Text)
-                    )
+                if (true)
                 {
                     ab = true;
                 }
@@ -47,7 +37,7 @@ namespace DCMS.LoginInitialize
             }
             catch (Exception ex)
             {
-                printerror.Text = ex.Message + "!!";
+                //printerror.Text = ex.Message + "!!";
 
             }
             return ab;
@@ -58,19 +48,19 @@ namespace DCMS.LoginInitialize
         {
             try
             {
-                usercode.Text = string.Empty;
-                username.Text = string.Empty;
-                localadd.Text = string.Empty;
-                peradd.Text = string.Empty;
-                phoneno.Text = string.Empty;
-                email.Text = string.Empty;
-                brchname.Text = string.Empty;
-                usergrp.Text = string.Empty;
+                //usercode.Text = string.Empty;
+                //username.Text = string.Empty;
+                //localadd.Text = string.Empty;
+                //peradd.Text = string.Empty;
+                //phoneno.Text = string.Empty;
+                //email.Text = string.Empty;
+                //brchname.Text = string.Empty;
+                //usergrp.Text = string.Empty;
 
             }
             catch (Exception ex)
             {
-                printerror.Text = ex.Message + "!!";
+                //printerror.Text = ex.Message + "!!";
             }
         }
     }
