@@ -4,4 +4,22 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.9" />
+    <PackageReference Include="MongoDB.Bson" Version="2.20.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.20.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\..\MySql Project\4.0 live Paytm-- for vishal\4.0 live Paytm-- for vishal\RRS\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>..\..\..\..\..\MySql Project\4.0 live Paytm-- for vishal\4.0 live Paytm-- for vishal\RRS\bin\Debug\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\..\..\..\..\MySql Project\4.0 live Paytm-- for vishal\4.0 live Paytm-- for vishal\RRS\bin\Debug\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

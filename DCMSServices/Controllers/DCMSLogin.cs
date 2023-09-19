@@ -10,7 +10,7 @@ namespace DCMSServices.Controllers
     {
         [Route("ChkLogin")]
         [HttpGet("{id}/{pswd}")]
-
+        //http://localhost:51856/chklogin?id=1
         public IActionResult Index(string id,string pswd)
         
         {
@@ -25,8 +25,37 @@ namespace DCMSServices.Controllers
            
         }
 
-        
-        
+
+
+
+
+
+        [Microsoft.AspNetCore.Authorization.AllowAnonymous]
+        [ActionName("DCMS_LoginReq")]
+        [HttpPost]
+        public IActionResult LoginReq(Models.LoginReqModel loginObj)
+        {
+            string status = "Success";
+            try
+            {
+                
+                return Ok(LoginReq(loginObj.LoginId, loginObj.LoginName));
+            }
+            catch (Exception ex)
+            {
+                //LogError.Log_Err_Async("NSE FNO Upload", new Exception("Error in request"), LogLevel.Warning);
+                status = ex.ToString();
+                //return Ok((int)AnalyticalServiceLib.ErrorCode.NoDataFound);
+                return Ok((int)1);
+            }
+            finally
+            {
+                //string Log = string.Format("\nTime: {0}.\nData: {1}.\rStatus: {2} #", DateTime.Now.ToLongTimeString(), Serialization.RsJsonSerializer.JsonSerializerObject(pRequestData), status);
+                //LogError.WriteLog("Request_Trace_" + DateTime.Now.ToString("dd-MM-yy") + ".txt", Log);
+            }
+        }
+
+
         public string LoginReq(string id, string pswd)
         {
             string res = string.Empty;

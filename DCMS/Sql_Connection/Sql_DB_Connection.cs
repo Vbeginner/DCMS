@@ -1,9 +1,12 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+
 
 namespace DCMS.Sql_Connection
 {
@@ -27,6 +30,33 @@ namespace DCMS.Sql_Connection
         {
             try
             {
+
+                #region mongo db connection
+                //https://cloud.mongodb.com/v2/64c55c244a4c9d1a44c6a349#/clusters - mongo db web url
+                const string connectionUri = "mongodb+srv://rajagrit321:<admin>@cluster0.zv1c78n.mongodb.net/?retryWrites=true&w=majority";
+
+                var settings = MongoClientSettings.FromConnectionString(connectionUri);
+
+                // Set the ServerApi field of the settings object to Stable API version 1
+                settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+
+                // Create a new client and connect to the server
+                var client = new MongoClient(settings);
+
+                // Send a ping to confirm a successful connection
+                try
+                {
+                    var result = client.GetDatabase("admin").RunCommand<BsonDocument>(new BsonDocument("ping", 1));
+                    Console.WriteLine("Pinged your deployment. You successfully connected to MongoDB!");
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+
+                #endregion
+
                 //SqlCon = new SqlConnection("Data Source=DESKTOP-D0BCFT7\\" +~ā
                 //                "SQL_STARTUP;Initial Catalog=ReportServer$SQL_STARTUP;" +
                 //                "Persist Security Info=True;User ID=;Password=");

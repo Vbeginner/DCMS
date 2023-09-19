@@ -14,11 +14,34 @@ namespace DCMS.LoginInitialize
             //Response.Redirect("~/Site.master");
         }
 
-       
 
-        protected void Button1_Click(object sender, EventArgs e)
+
+        protected void LgnBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/dashboard.aspx");
+
+            ScriptManager.RegisterClientScriptBlock(this, GetType(), "mykey", "lgnFunc();", true); //using this we can use js fuction 
+
+            Dictionary<string, string> loginDt = new Dictionary<string, string>()
+            {
+                { "id", lgnEmail.ToString() },
+                { "pswd", lgnPswd.ToString() }
+
+            };
+
+            //DCMSServices.Models.LoginReqModel logObj = new DCMSServices.Models.LoginReqModel
+            //{
+            //    LoginId = "1234",
+            //    LoginName = "ricky@123",
+            //    UserType = "U"
+            //};
+            string url = @"https://localhost:44396/api/Login/LoginReq";//?id=1234&&pswd=ricky@123";
+            //string res =  CommonCenter.GlobalMethod.CommonPostReq(url,loginDt);
+            string res =  CommonCenter.GlobalMethod.CommonGetReq(url, "id=10012&&pswd=ricky@123");
+            if (res != null && res == "1")
+            {
+                Response.Redirect("~/dashboard.aspx");
+
+            }
         }
 
         public bool Validate()
@@ -26,7 +49,8 @@ namespace DCMS.LoginInitialize
             bool ab = false;
             try
             {
-                if (true)
+                
+                if (lgnEmail != null)
                 {
                     ab = true;
                 }

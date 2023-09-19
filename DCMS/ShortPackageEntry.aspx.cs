@@ -133,16 +133,16 @@ namespace DCMS
         {
             try
             {
-                List<SmartModel.UserMasterModel> service1 = new List<SmartModel.UserMasterModel>();
-                //List<SmartModel.UserMasterModel> service = dALService.Service.ToList();
-                List<object> service = new List<object>();
-                if (service.Count > 0 && service != null)
-                {
-                    SmartModel.UserMasterModel dt = new SmartModel.UserMasterModel();
+                //List<SmartModel.UserMasterModel> service1 = new List<SmartModel.UserMasterModel>();
+                ////List<SmartModel.UserMasterModel> service = dALService.Service.ToList();
+                //List<object> service = new List<object>();
+                //if (service.Count > 0 && service != null)
+                //{
+                //    SmartModel.UserMasterModel dt = new SmartModel.UserMasterModel();
                     
-                    //gridService.DataSource = service;
-                    //gridService.DataBind();
-                }
+                //    //gridService.DataSource = service;
+                //    //gridService.DataBind();
+                //}
             }
             catch (Exception ex)
             {

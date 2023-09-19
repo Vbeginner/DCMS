@@ -1,11 +1,4 @@
-﻿<%--<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="LoginView.aspx.cs" Inherits="DCMS.LoginInitialize.LoginView" %>--%>
-
-<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="LoginView.aspx.cs" Inherits="DCMS.LoginInitialize.LoginView" %>
-
-<%--<%@ MasterType VirtualPath="~/Site.Master" %>--%>
-
-<%--< @import url('https://fonts.googleapis.com/css?family=Mukta');--%>
-<%--<asp:Content ID="Content1" ContentPlaceHolderID="Main" runat="Server">--%>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="LoginView.aspx.cs" Inherits="DCMS.LoginInitialize.LoginView" %>
 
 <!DOCTYPE html>
 
@@ -298,12 +291,21 @@
             <div class="white-panel">
                 <div class="login-show">
                     <h2>LOGIN</h2>
-                    <input type="text" name="lgnEmail" placeholder="Email" />
-                    <input type="password" name="lgnPswd" placeholder="Password" />
+                    <input type="text" runat="server" id="lgnEmail" placeholder="Email" />
+                   
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="lgnEmail" ForeColor="Red" runat="server" 
+                        ErrorMessage="E-mail cannot be blank"/>
+                     
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="lgnEmail" ErrorMessage="Enter proper email format" ForeColor="Red" 
+                         ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+
+                    <input type="password" runat="server" id="lgnPswd" placeholder="Password" />
+
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="lgnPswd" ForeColor="Red" runat="server" 
+                        ErrorMessage="Password cannot be blank"/>
                     <%--<input type="button" id="Button1" runat="server" value="Button" onclick="Button1_Click" />--%>
                     <a href="">Forgot password?</a>
-
-                    <asp:Button  Width="150px" Height="40px"  BorderStyle="Solid"  BackColor="#444444"  runat="server" Text="Button" OnClick="Button1_Click" />
+                    <asp:Button  Width="150px" Height="40px" BorderStyle="Solid"  BackColor="#444444" id="UserLgn" runat="server" Text="Button" OnClientClick="lgnFunc()"  />
 
                 </div>
                 <div class="register-show">
@@ -319,7 +321,7 @@
 
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+        <script src="../js/MainJS.js"></script>
         <script>
             $(document).ready(function () {
                 $('.login-info-box').fadeOut();
