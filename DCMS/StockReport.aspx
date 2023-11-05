@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StockReport.aspx.cs" Inherits="DCMS.StockReport" %>
 
-<asp:Content ID="Content1"ContentPlaceHolderID="Main" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="Main" runat="server">
     <html>
     <head>
         <title></title>

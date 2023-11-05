@@ -14,34 +14,13 @@ namespace DCMS
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //GetUserMasterdata();
         }
 
         protected void SubmitUserDetail_Click(object sender, EventArgs e)
         {
             try
             {
-                //if (Validate() == true)
-                //{
-                //    string query = "INSERT INTO USER_MASTER(USER_CODE,USER_NAME,BRANCH_NAME,USER_GROUP,JOIN_DATE,LOCAL_ADD,PRE_ADD,IS_ACTIVE,ADMIN_DETAIL," +
-                // "EMAIL_ID,PHONE_NO,ROUTE_NAME) VALUES ('" + usercode.Text + "','" + username.Text + "','" + brchname.Text + "','" +
-                // usergrp.Text + "','" + joinddate.Text + "','" + localadd.Text + "','" + peradd.Text + "','" + isActive.Text + "','" +
-                // admindetails.Text + "','" + email.Text + "','" + phoneno.Text + "','')";
-
-                //    int ab = Sql_Connection.Sql_DB_Connection.ExecuteNonQuery(query);
-                //    if (ab == 1)
-                //    {
-                //        string message = "Your details have been saved successfully.";
-                //        string script = "window.onload = function(){ alert('";
-                //        script += message;
-                //        script += "')};";
-
-                //        ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
-                //        ClearAll();
-                //        GetUserMasterdata();
-
-                //    }
-               // }
+               
 
 
 
@@ -52,6 +31,18 @@ namespace DCMS
             }
         }
 
+        [System.Web.Services.WebMethod]
+        public static void AddNewPickupReq()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
         //public bool Validate()
         //{
@@ -86,49 +77,32 @@ namespace DCMS
         //}
 
 
-        //public void ClearAll()
-        //{
-        //    try
-        //    {
-        //        usercode.Text = string.Empty;
-        //        username.Text = string.Empty;
-        //        localadd.Text = string.Empty;
-        //        peradd.Text = string.Empty;
-        //        phoneno.Text = string.Empty;
-        //        email.Text = string.Empty;
-        //        brchname.Text = string.Empty;
-        //        usergrp.Text = string.Empty;
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        printerror.Text = ex.Message + "!!";
-        //    }
-        //}
-
-        #region grid code
-
-        public void GetUserMasterdata()
+        public void ClearAll()
         {
             try
             {
+                clientid.Text = string.Empty;
+                //pickupT.Text = string.Empty;
+                pickupD.Text = string.Empty;
+                pickupBoy.Text = string.Empty;
+                PickupAdd.Text = string.Empty;
+                origin.Text = string.Empty;
+                mobileno.Text = string.Empty;
+                PincodeId.Text = string.Empty;
+                CongineeDest.Text = string.Empty;
+                pcs.Text = string.Empty;
+                AppWt.Text = string.Empty;
 
-                string query = "SELECT * FROM USER_MASTER";
-                DataSet ds = new DataSet();
-
-                ds = Sql_Connection.Sql_DB_Connection.ExecuteQuery(query);
-                //adapter.Fill(ds, "Employee");
-
-                //grvEmployee.DataSource = ds;
-                //grvEmployee.DataBind();
             }
             catch (Exception ex)
             {
-
-                //throw;
+                printerror.Text = ex.Message + "!!";
             }
         }
 
+        #region grid code
+
+       
         public void _BindService()
         {
             try
@@ -208,6 +182,19 @@ namespace DCMS
                 //throw;
             }
         }
+
         #endregion
+
+        protected void ClearUserDetail_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearAll();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }

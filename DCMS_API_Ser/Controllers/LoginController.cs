@@ -12,17 +12,18 @@ namespace DCMS_API_Ser.Controllers
     public class LoginController : ApiController
     {
 
-        
 
+        //url example - https://localhost:44396/api/Login/LoginReq?id=1234&pswd=ricky@123
         //[Route("chkLogin")]
         [ActionName("LoginReq")]
         //[HttpGet("id/pswd")]
         [HttpGet]
+
         public IHttpActionResult Loginreq(string id, string pswd)
         {
             try
             {
-                return Ok(CheckLogin(id));
+                return Ok(CheckLogin(id,pswd));
             }
             catch (Exception ex)
             {
@@ -31,26 +32,8 @@ namespace DCMS_API_Ser.Controllers
         }
 
 
-        public string LoginReq(string id, string pswd)
-        {
-            string res = string.Empty;
-            try
-            {
-                if (id == "1234" && pswd == "ricky@123")
-                {
-                    return "You Are In....";
-                }
-                else
-                    return "You Are Out!!";
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-            return res;
-        }
-
-        public int CheckLogin(string loginId)
+        
+        public int CheckLogin(string loginId,string pswd)
         {
             int res = 0;
             try
@@ -60,12 +43,24 @@ namespace DCMS_API_Ser.Controllers
                 var dt = DCMSServices.SQLConnection.SQL_Connector.ExecuteQry(LoginChkQuery);
                 if (dt != null && dt.Tables[0].Rows.Count > 0 )
                 {
-                    return 1;
+                    
+                    return 0;
                     //string InsertLoginChkQuery = "INSERT INTO LOGIN_TABLE LOGIN_ID,USER_NAME, USER_TYPE) VALUES(" + Convert.ToInt32(loginId);
                     //var dt = DCMSServices.SQLConnection.SQL_Connector.ExecuteNonQuery(LoginChkQuery);
                 }
                 else
                 {
+                    if (!string.IsNullOrEmpty(loginId)) 
+                    {
+                        string userName = string.Empty;
+                        string userType = "U";
+                        string LoginStatus = "N1";//Active User, N2 InActive, R Reset  
+                        LoginChkQuery = "insert into login_table (LOGIN_ID,USER_NAME,USER_TYPE,s_password,s_login_status) values"
+                            +"('"+Convert.ToInt32(loginId)+"','"+userName+"','"+userType+ "','"+pswd+"','"+LoginStatus+"')";
+                        var RowDt = DCMSServices.SQLConnection.SQL_Connector.ExecuteNonQuery(LoginChkQuery);
+                        res = 1;
+                    }
+
                     return res;
                 }
                 //DCMSServices.SQLConnection.SQL_Connector.ExecuteNonQuery("");

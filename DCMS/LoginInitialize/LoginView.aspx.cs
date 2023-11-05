@@ -11,6 +11,8 @@ namespace DCMS.LoginInitialize
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //ScriptManager.RegisterClientScriptBlock(this, GetType(), "mykey", "callCodeBehindFunction();", true); //using this we can use js fuction 
+
             //Response.Redirect("~/Site.master");
         }
 
@@ -19,7 +21,7 @@ namespace DCMS.LoginInitialize
         protected void LgnBtn_Click(object sender, EventArgs e)
         {
 
-            ScriptManager.RegisterClientScriptBlock(this, GetType(), "mykey", "lgnFunc();", true); //using this we can use js fuction 
+            //ScriptManager.RegisterClientScriptBlock(this, GetType(), "mykey", "lgnFunc();", true); //using this we can use js fuction 
 
             Dictionary<string, string> loginDt = new Dictionary<string, string>()
             {
@@ -34,41 +36,44 @@ namespace DCMS.LoginInitialize
             //    LoginName = "ricky@123",
             //    UserType = "U"
             //};
-            string url = @"https://localhost:44396/api/Login/LoginReq";//?id=1234&&pswd=ricky@123";
+            //http://127.0.0.1/api/Login/LoginReq?id=12345&pswd=ricky@123
+            string url = @"http://127.0.0.1/api/Login/LoginReq?";//id=1234&&pswd="+lgnPswd;
             //string res =  CommonCenter.GlobalMethod.CommonPostReq(url,loginDt);
-            string res =  CommonCenter.GlobalMethod.CommonGetReq(url, "id=10012&&pswd=ricky@123");
-            if (res != null && res == "1")
+            string res =  CommonCenter.GlobalMethod.CommonGetReq(url, "id=1234&&pswd="+lgnPswd);
+            if (res != null && res == "0")
             {
                 Response.Redirect("~/dashboard.aspx");
 
             }
         }
 
-        public bool Validate()
-        {
-            bool ab = false;
-            try
-            {
-                
-                if (lgnEmail != null)
-                {
-                    ab = true;
-                }
-                else
-                {
-                    ab = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                //printerror.Text = ex.Message + "!!";
+        //public bool Validate()
+        //{
+        //    bool ab = false;
+        //    try
+        //    {
 
-            }
-            return ab;
-        }
+        //        if (lgnEmail != null)
+        //        {
+        //            ab = true;
+        //        }
+        //        else
+        //        {
+        //            ab = false;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        //printerror.Text = ex.Message + "!!";
 
+        //    }
+        //    return ab;
+        //}
 
+        [System.Web.Services.WebMethod]
+        [System.Web.Script.Services.ScriptMethod()]
         public void ClearAll()
+        //public void MyCodeBehindFunction()
         {
             try
             {

@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31424.327
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCMS", "DCMS\DCMS.csproj", "{8B0352A6-A3F2-48E7-8386-5E140B074F33}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsNew_TWS", "WhatsNew_TWS\WhatsNew_TWS.csproj", "{9B1A2982-6B1E-4219-BAB4-15E15F8F7EAA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DCMS_1.0", "DCMS_1.0\DCMS_1.0.csproj", "{8C29CE7E-459D-40A1-8889-3E7BFC6D2E0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCMS_API_Ser", "DCMS_API_Ser\DCMS_API_Ser.csproj", "{14F3AE6B-C39B-444B-A503-68B5D3076B77}"
 EndProject
@@ -25,10 +23,6 @@ Global
 		{9B1A2982-6B1E-4219-BAB4-15E15F8F7EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B1A2982-6B1E-4219-BAB4-15E15F8F7EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B1A2982-6B1E-4219-BAB4-15E15F8F7EAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C29CE7E-459D-40A1-8889-3E7BFC6D2E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C29CE7E-459D-40A1-8889-3E7BFC6D2E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C29CE7E-459D-40A1-8889-3E7BFC6D2E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C29CE7E-459D-40A1-8889-3E7BFC6D2E0E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{14F3AE6B-C39B-444B-A503-68B5D3076B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{14F3AE6B-C39B-444B-A503-68B5D3076B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14F3AE6B-C39B-444B-A503-68B5D3076B77}.Release|Any CPU.ActiveCfg = Release|Any CPU

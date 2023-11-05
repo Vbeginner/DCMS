@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" MaintainScrollPositionOnPostback="true" AutoEventWireup="true" CodeBehind="PacketEntry.aspx.cs" Inherits="DCMS.PacketEntry" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" MaintainScrollPositionOnPostback="false" AutoEventWireup="true" CodeBehind="PacketEntry.aspx.cs" Inherits="DCMS.PacketEntry" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Main" runat="server">
     <html>
